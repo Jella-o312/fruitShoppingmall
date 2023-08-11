@@ -1,0 +1,92 @@
+.App .main-bg {
+  height: 300px;
+  /* 📌 background-image: url('./bg.jpg'); ← 여기에 배너 이미지를 넣어도 되지만 js에서도 넣을 수 있음*/
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+/* 광식이의 과일가게 */
+.App .main-bg span{
+  margin: auto;
+  font-size: 300%;
+  color: white;
+  font-weight: 900;
+  background-color: rgba(232, 73, 73, 0.863);
+  padding: 30px 70px;
+  border-radius: 15px;
+}
+
+.row{
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+
+.start {
+  opacity: 0;
+}
+
+.end{
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+/* ----------------WatchedProduct-------------------- */
+.App {
+  position: relative;
+}
+.recent-container {
+  max-width: 120px;
+  margin: 0 auto;
+  padding: 5px;
+  position: fixed;
+  right: 5px;  
+  top: 200px
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;  /* 마우스 올렸을때 손까락 모양으로 바뀜*/
+}
+
+.card:hover {
+  border: 1px solid rgba(255, 76, 59, 0.894);
+  background-color: rgba(255, 76, 59, 0.894);
+  color: white;
+  font-weight: 400;
+}
+
+.card:active {
+  position: relative;
+  top: 1px;
+  bottom: 1px;
+}
+
+
+.card img {
+  width: 100%;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card p, .cards p {
+  margin: 0;
+}
+.cards > p {
+  color: white;
+}
